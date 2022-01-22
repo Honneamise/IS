@@ -110,9 +110,11 @@ int IsAccept(Is *is, char c)
 /**********/
 int IsExpect(Is *is, char c) 
 {
-	if(IsEnd(is)){ return 0; }
+    if(IsEnd(is)){ return 0; }
 
     if(IsAccept(is,c)) { return 1; }
+	
+    //can set personalized error
     
     return 0;//error
 }
